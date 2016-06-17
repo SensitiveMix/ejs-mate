@@ -1,0 +1,22 @@
+<% layout('layout.ejs') %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <%=user[0].name%>
+    <%user.forEach(function(users){%>
+    <ul>
+      <li><%=users.name%></li>
+      <li><%=users.age%></li>
+    </ul>
+    <%})%>
+
+
+  </body>
+</html>
